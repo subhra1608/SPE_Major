@@ -1,0 +1,24 @@
+2024-04-21 22:51:28,335 - INFO - Welcome to our MLOPs Project that would help to detect the presence of Breast Cancer! 
+2024-04-21 22:51:28,354 - INFO - Starting data ingestion...
+2024-04-21 22:51:28,485 - INFO - Data ingestion completed.
+2024-04-21 22:51:28,576 - INFO - Creating DataFrame...
+2024-04-21 22:51:28,577 - INFO - DataFrame created successfully.
+2024-04-21 22:51:36,216 - INFO - Training Phase Completed
+2024-04-21 22:51:36,217 - INFO - Model Training with top features
+2024-04-21 22:54:50,688 - INFO - Training Phase Completed
+2024-04-21 22:54:50,688 - INFO - Model Training with top features
+2024-04-21 22:57:11,893 - INFO - Training Phase Completed
+2024-04-21 22:57:11,896 - INFO - Model Training with top features
+2024-04-21 22:58:41,393 - INFO - Training Phase Completed
+2024-04-21 22:58:41,394 - INFO - Model Training with top features
+2024-04-21 22:59:16,157 - INFO - Training Phase Completed
+2024-04-21 22:59:16,158 - INFO - Model Training with top features
+2024-04-21 23:00:42,887 - INFO - Training Phase Completed
+2024-04-21 23:00:42,887 - INFO - Model Training with top features
+2024-04-21 23:03:06,475 - INFO - Training Phase Completed
+2024-04-21 23:03:06,478 - INFO - Model Training with top features
+2024-04-21 23:03:06,584 - INFO - Scaler saved successfully.
+2024-04-21 23:03:10,904 - INFO - Training Phase Completed
+2024-04-21 23:03:16,100 - INFO - Evaluating model...
+2024-04-21 23:03:16,107 - INFO - Model accuracy: 0.9649122807017544
+2024-04-21 23:03:21,441 - INFO - Model Saved

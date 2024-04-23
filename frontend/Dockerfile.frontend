@@ -1,0 +1,22 @@
+# Stage 1: Build React application
+FROM node:14-alpine as builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+# Install SweetAlert 2 package
+RUN npm install sweetalert2
+
+COPY . .
+
+RUN npm run build
+
+# Stage 2: Serve React application using Nginx
+FROM nginx:stable-alpine
+
+COPY --from=builder /app/build /usr/share/nginx/html
+
+EXPOSE 3000

@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* Set background image to the entire screen */
+  background-image: url(https://img.chemie.de/Portal/News/6391c1c937255_o11T4yOiH.png?tr=w-1024,h-768,cm-extract,x-0,y-120);
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+.container {
+  margin-top: 7%;
+  margin-left: 3%;
+}
+
+
+.centered-content {
+  font-family: Arial, sans-serif;
+  font-size: x-large;
+  width: 50%;
+  margin: 50px auto;
+  background-color: rgba(179, 131, 231, 0.7); /* Transparent background color */
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+/* color: aliceblue; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-group input {
+  margin-left: 15px;
+  height: 40px;
+  width: 250px;
+  font-size: medium;
+}
+
+.submitButton {
+  margin-top: 10px;
+}
+
+.submitButton input {
+  display: block;
+  margin: 0 auto; /* Center the button horizontally */
+  width: 100%;
+  padding: 15px; /* Increase padding for larger input box */
+  background-color:  rgb(7, 38, 118); /* Change text color to red */
+  ;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sweet-alert-custom-style {
+  background-color: rgba(255, 255, 255, 0.9); /* Background color with transparency */
+  color: rgb(7, 38, 118); /* Text color */
+  border-radius: 10px; /* Border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
