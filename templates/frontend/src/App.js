@@ -23,7 +23,7 @@ const App = () => {
             const response = await axios.post('http://localhost:5000/predict', formData, {
                 headers: {
                     "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*"
+                    //"Access-Control-Allow-Origin": "*"
                 }
             });
             // Display prediction as styled alert using SweetAlert
