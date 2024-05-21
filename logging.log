@@ -1,0 +1,17 @@
+
+2024-05-21 21:06:29,627 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:06:29,637 - INFO - Prediction Successfull!
+2024-05-21 21:06:29,637 - INFO - The Cancer is Benign
+2024-05-21 21:08:40,094 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:08:40,103 - INFO - Prediction Successfull!
+2024-05-21 21:08:40,103 - INFO - The Cancer is Benign
+2024-05-21 21:10:32,023 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:10:32,032 - INFO - Prediction Successfull!
+2024-05-21 21:10:32,032 - INFO - The Cancer is Benign
+2024-05-21 21:12:52,137 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:12:52,142 - INFO - Prediction Successfull!
+2024-05-21 21:12:52,142 - INFO - The Cancer is Benign
+2024-05-21 21:14:57,759 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:14:57,760 - ERROR - Error occurred during prediction: could not convert string to float: ''
+2024-05-21 21:14:59,027 - INFO - Welcome to breast cancer prediction!
+2024-05-21 21:14:59,028 - ERROR - Error occurred during prediction: could not convert string to float: ''

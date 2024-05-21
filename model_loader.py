@@ -10,7 +10,7 @@ def load_model(model_path):
     # print("print ho rha")
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
-    logger.info("Model loaded successfully.")
+    logger.info("Model loaded successfully subhra.")
     return model
 
 def load_scaler(scaler_path):

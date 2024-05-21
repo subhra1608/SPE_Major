@@ -17,4 +17,7 @@ services:
       dockerfile: Dockerfile.backend
     ports:
       - "5000:5000"
-    
+    volumes:
+      - ./elasticSearch_log.py:/app/elasticSearch_log.py  # Mount the Elasticsearch log file
+    environment:
+      - PYTHONPATH=/app  # Set the Python path to include the app directory
