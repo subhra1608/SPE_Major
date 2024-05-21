@@ -14,4 +14,47 @@
 2024-05-21 21:14:57,759 - INFO - Welcome to breast cancer prediction!
 2024-05-21 21:14:57,760 - ERROR - Error occurred during prediction: could not convert string to float: ''
 2024-05-21 21:14:59,027 - INFO - Welcome to breast cancer prediction!
-2024-05-21 21:14:59,028 - ERROR - Error occurred during prediction: could not convert string to float: ''
+2024-05-21 21:14:59,028 - ERROR - Error occurred during prediction: could not convert string to float: ''2024-05-21 22:48:44,043 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:48:44,047 - INFO - Prediction Successfull!
+2024-05-21 22:48:44,047 - INFO - The Cancer is Malignant
+2024-05-21 22:48:45,287 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:48:45,294 - INFO - Prediction Successfull!
+2024-05-21 22:48:45,295 - INFO - The Cancer is Benign
+2024-05-21 22:51:51,492 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:51:51,495 - INFO - Prediction Successfull!
+2024-05-21 22:51:51,495 - INFO - The Cancer is Malignant
+2024-05-21 22:51:52,783 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:51:52,792 - INFO - Prediction Successfull!
+2024-05-21 22:51:52,792 - INFO - The Cancer is Benign
+2024-05-21 22:52:57,952 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:52:57,955 - INFO - Prediction Successfull!
+2024-05-21 22:52:57,955 - INFO - The Cancer is Malignant
+2024-05-21 22:52:59,140 - INFO - Welcome to breast cancer prediction!
+2024-05-21 22:52:59,143 - INFO - Prediction Successfull!
+2024-05-21 22:52:59,143 - INFO - The Cancer is Benign
+2024-05-21 23:03:21,136 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:03:21,139 - INFO - Prediction Successfull!
+2024-05-21 23:03:21,140 - INFO - The Cancer is Benign
+2024-05-21 23:03:22,457 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:03:22,465 - INFO - Prediction Successfull!
+2024-05-21 23:03:22,465 - INFO - The Cancer is Malignant
+2024-05-21 23:07:38,055 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:07:38,060 - INFO - Prediction Successfull!
+2024-05-21 23:07:38,060 - INFO - The Cancer is Benign
+2024-05-21 23:07:39,219 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:07:39,220 - INFO - Error occurred during prediction due to insufficient data
+2024-05-21 23:07:54,771 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:07:54,774 - INFO - Prediction Successfull!
+2024-05-21 23:07:54,774 - INFO - The Cancer is Benign
+2024-05-21 23:07:55,704 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:07:55,705 - INFO - Error occurred during prediction due to insufficient data
+2024-05-21 23:08:55,560 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:08:55,564 - INFO - Prediction Successfull!
+2024-05-21 23:08:55,564 - INFO - The Cancer is Benign
+2024-05-21 23:08:56,838 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:08:56,838 - INFO - Error occurred during prediction due to insufficient data
+2024-05-21 23:09:33,171 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:09:33,174 - INFO - Prediction Successfull!
+2024-05-21 23:09:33,174 - INFO - The Cancer is Benign
+2024-05-21 23:09:34,726 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:09:34,727 - INFO - Error occurred during prediction due to insufficient data

@@ -16,30 +16,48 @@ const App = () => {
     });
 
     // Function to handle form submission
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            // Make a POST request to the prediction endpoint
-            const response = await axios.post('http://localhost:5000/predict', formData, {
-                headers: {
-                    "Content-Type": "application/json",
-                    //"Access-Control-Allow-Origin": "*"
-                }
-            });
-            // Display prediction as styled alert using SweetAlert
-            Swal.fire({
-                title: "Prediction Result",
-                text: response.data.prediction_text,
-                icon: "success",
-                confirmButtonText: "OK",
-                customClass: {
-                    confirmButton: 'sweet-alert-custom-style'
-                }
-            });
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
+    // Function to handle form submission
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    const numInputs = Object.values(formData).filter(value => value.trim() !== '').length;
+    
+    // Check if the number of inputs is less than 5
+    if (numInputs < 5) {
+        // Show SweetAlert for insufficient data
+        Swal.fire({
+            title: "Insufficient Data",
+            text: "Please fill in all fields before making a prediction.",
+            icon: "warning",
+            confirmButtonText: "OK",
+            customClass: {
+                confirmButton: 'sweet-alert-custom-style'
+            }
+        });
+        return; // Exit the function early
+    }
+
+    try {
+        // Make a POST request to the prediction endpoint
+        const response = await axios.post('http://localhost:5000/predict', formData, {
+            headers: {
+                "Content-Type": "application/json",
+                //"Access-Control-Allow-Origin": "*"
+            }
+        });
+        // Display prediction as styled alert using SweetAlert
+        Swal.fire({
+            title: "Prediction Result",
+            text: response.data.prediction_text,
+            icon: "success",
+            confirmButtonText: "OK",
+            customClass: {
+                confirmButton: 'sweet-alert-custom-style'
+            }
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
 
     // Function to handle input changes
     const handleChange = (e) => {

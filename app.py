@@ -30,8 +30,8 @@ def predict():
 
         # Ensure the correct number of features
         if len(data) != 5:
-            return jsonify({"error": "Expected 5 input values"}), 400
-            app.logger.info("Prediction cannot be processed due to inappropriate input")
+            return jsonify({"error": "Expected 5 input values"}), 500
+            # app.logger.info("Prediction cannot be processed due to inappropriate input")
 
         # Transform input data using the same scaler used during training
         final_input = scaler.transform([data])
@@ -50,8 +50,8 @@ def predict():
         return jsonify({"prediction_text": prediction_text}), 200
     
     except Exception as e:
-        app.logger.error(f"Error occurred during prediction: {str(e)}")
-        return jsonify({"error": "Internal Server Error"}), 500
+        app.logger.info(f"Error occurred during prediction due to insufficient data")
+        return jsonify({"error": "Internal Server Error"}), 400
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
