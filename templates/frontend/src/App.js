@@ -38,7 +38,7 @@ const handleSubmit = async (e) => {
 
     try {
         // Make a POST request to the prediction endpoint
-        const response = await axios.post('http://localhost:5000/predict', formData, {
+        const response = await axios.post('http://localhost:5001/predict', formData, {
             headers: {
                 "Content-Type": "application/json",
                 //"Access-Control-Allow-Origin": "*"
