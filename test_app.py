@@ -19,6 +19,19 @@ class TestApp(unittest.TestCase):
         data = response.json
         self.assertIn('prediction_text', data)
 
+    def test_predict_endpoint_with_malignant_data(self):
+        input_data = {
+            'worst perimeter': '59.16',
+            'worst concave points': '0.0000',
+            'mean concave points': '0',
+            'mean concavity': '0.00000',
+            'worst radius': '0'
+        }
+        response = self.app.post('/predict', json=input_data)
+        self.assertEqual(response.status_code, 200)
+        data = response.json
+        self.assertIn('prediction_text', data)
+
     def test_predict_endpoint_with_insufficient_data(self):
         input_data = {
     'worst perimeter': '0',

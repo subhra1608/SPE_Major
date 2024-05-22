@@ -58,3 +58,11 @@
 2024-05-21 23:09:33,174 - INFO - The Cancer is Benign
 2024-05-21 23:09:34,726 - INFO - Welcome to breast cancer prediction!
 2024-05-21 23:09:34,727 - INFO - Error occurred during prediction due to insufficient data
+2024-05-21 23:28:34,467 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:28:34,470 - INFO - Prediction Successfull!
+2024-05-21 23:28:34,470 - INFO - The Cancer is Benign
+2024-05-21 23:28:35,805 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:28:35,806 - INFO - Error occurred during prediction due to insufficient data
+2024-05-21 23:28:35,808 - INFO - Welcome to breast cancer prediction!
+2024-05-21 23:28:35,817 - INFO - Prediction Successfull!
+2024-05-21 23:28:35,817 - INFO - The Cancer is Malignant
