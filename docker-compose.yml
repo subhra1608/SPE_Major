@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile.backend
     image: subhra1608/mlops_23:backend-latest # Update image name with repository name and tag
     ports:
-      - "2050:2050"
+      - "2060:2060"
     volumes:
       - ./elasticSearch_log.py:/app/elasticSearch_log.py  # Mount the Elasticsearch log file
     environment:
