@@ -1,11 +1,21 @@
 ---
-- name: Run Docker Compose
+- name: Run Docker Compose with Dynamic Port
   hosts: localhost
   gather_facts: no
+  vars:
+    docker_compose_dir: /home/subhrajyotisingh/Desktop/working
+    external_port: "{{ external_port }}"  # This will be passed from Jenkins pipeline
   tasks:
+    - name: Modify Docker Compose file to use dynamic port
+      ansible.builtin.lineinfile:
+        path: "{{ docker_compose_dir }}/docker-compose.yml"
+        regexp: '^(\s+-\s+"\d+:)(\d+)"$'
+        backrefs: yes
+        line: '\1{{ external_port }}:\2"'
+      become: true
+
     - name: Run Docker Compose
       command: /usr/local/bin/docker-compose up -d
-
       args:
-        chdir: /home/subhrajyotisingh/Desktop/working
+        chdir: "{{ docker_compose_dir }}"
       become: true
