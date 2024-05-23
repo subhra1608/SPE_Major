@@ -5,21 +5,46 @@ services:
     build:
       context: ./templates/frontend  
       dockerfile: Dockerfile
-    image: subhra1608/mlops_23:frontend-latest # Update image name with repository name and tag
+    image: subhra1608/mlops_23:frontend-latest
     ports:
       - "3000:3000"
     depends_on:
       - backend
-   
+      # - elasticsearch
+      # - logstash
+      # - kibana
 
   backend:
     build:
       context: ./
       dockerfile: Dockerfile.backend
-    image: subhra1608/mlops_23:backend-latest # Update image name with repository name and tag
+    image: subhra1608/mlops_23:backend-latest
     ports:
       - "2060:2060"
     volumes:
-      - ./elasticSearch_log.py:/app/elasticSearch_log.py  # Mount the Elasticsearch log file
+      - ./elasticSearch_log.py:/app/elasticSearch_log.py
     environment:
-      - PYTHONPATH=/app  # Set the Python path to include the app directory
+      - PYTHONPATH=/app
+
+  # elasticsearch:
+  #   image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+  #   environment:
+  #     - discovery.type=single-node
+  #   ports:
+  #     - "9200:9200"
+  #     - "9300:9300"
+
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:7.10.2
+  #   volumes:
+  #     - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+  #   ports:
+  #     - "5000:5000"
+  #     - "9600:9600"
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:7.10.2
+  #   ports:
+  #     - "5601:5601"
+  #   depends_on:
+  #     - elasticsearch
