@@ -14,7 +14,13 @@
         line: '\1{{ external_port }}:\2"'
       become: true
 
-    - name: Run Docker Compose
+    - name: Stop Docker Compose
+      command: /usr/local/bin/docker-compose down
+      args:
+        chdir: "{{ docker_compose_dir }}"
+      become: true
+
+    - name: Start Docker Compose
       command: /usr/local/bin/docker-compose up -d
       args:
         chdir: "{{ docker_compose_dir }}"

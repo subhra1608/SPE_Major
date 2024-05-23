@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile.backend
     image: subhra1608/mlops_23:backend-latest
     ports:
-      - "{{ external_port }}:2060"
+      - "2060:2060"
     volumes:
       - ./elasticSearch_log.py:/app/elasticSearch_log.py
     environment:
