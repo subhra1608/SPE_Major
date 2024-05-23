@@ -49,3 +49,4 @@ services:
   #   depends_on:
   #     - elasticsearch
 
+    - "7090:7070"
