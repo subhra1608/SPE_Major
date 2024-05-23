@@ -1,17 +1,24 @@
----
 - name: Run Docker Compose
   hosts: localhost
   gather_facts: no
+  environment:
+    DOCKER_PORT: '7070'  # Define the port to use for Docker services
   tasks:
     - name: Down Docker Compose
       command: /usr/local/bin/docker-compose down
-      become: true
-
       args:
         chdir: /home/subhrajyotisingh/Desktop/working
+      become: true
+
+    - name: Set dynamic port in docker-compose.yml
+      ansible.builtin.lineinfile:
+        path: /home/subhrajyotisingh/Desktop/working/docker-compose.yml
+        regexp: '^(\s+-\s+")2060:"'  # Match the line with the port number (2060)
+        line: '\1"{{ DOCKER_PORT }}:"'  # Replace 2060 with DOCKER_PORT
+      become: true
+
     - name: Run Docker Compose
       command: /usr/local/bin/docker-compose up -d
-      become: true
       args:
         chdir: /home/subhrajyotisingh/Desktop/working
-
+      become: true
