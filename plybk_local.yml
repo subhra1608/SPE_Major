@@ -5,10 +5,13 @@
   tasks:
     - name: Down Docker Compose
       command: /usr/local/bin/docker-compose down
+      become: true
+
       args:
         chdir: /home/subhrajyotisingh/Desktop/working
     - name: Run Docker Compose
       command: /usr/local/bin/docker-compose up -d
+      become: true
       args:
         chdir: /home/subhrajyotisingh/Desktop/working
 
