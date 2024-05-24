@@ -6,12 +6,12 @@
     - name: Down Docker Compose
       command: /usr/local/bin/docker-compose down
       become: true
-      args:
-        chdir: /home/subhrajyotisingh/Desktop/working
+      # args:
+      #   chdir: /home/subhrajyotisingh/Desktop/working
     - name: Run Docker Compose
       command: /usr/local/bin/docker-compose up -d
       become: true
-      args:
-        chdir: /home/subhrajyotisingh/Desktop/working
+      # args:
+      #   chdir: /home/subhrajyotisingh/Desktop/working
 
 # ansible-playbook deploy_docker_compose.yml --ask-become-pass
