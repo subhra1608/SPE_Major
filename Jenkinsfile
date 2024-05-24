@@ -5,7 +5,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('subhra1608-dockerhub')
         GITHUB_REPO_URL = 'https://github.com/subhra1608/SPE_MAJOR.git'
         DOCKER_PORT = '7070' // Define the port to use for Docker services
-        DOCKER_PORT_2 = '7090' // Define another port for Ansible playbook stage
+       
     }
 
     stages {
@@ -40,7 +40,6 @@ pipeline {
             }
         }
         
-        
         stage('Build Docker Images') {
             steps {
                 // Build frontend Docker image
@@ -68,15 +67,26 @@ pipeline {
                 }
             }
         }
+
         
         
+        stage('Stage 12: Clean Docker Images') {
+            steps {
+                script {
+                    // Prune unused Docker containers and images
+                    sh 'docker container prune -f'
+                    sh 'docker image prune -f'
+                }
+            }
+        }
+
         stage('Verify Ansible Installation') {
             steps {
                 sh 'ansible --version'
             }
         }
 
-         stage('Run Ansible Playbook') {
+        stage('Run Ansible Playbook') {
             steps {
                 script {
                     // Modify Docker Compose file dynamically to use port 7070
@@ -90,7 +100,5 @@ pipeline {
                 }
             }
         }
-
-
     }
 }
